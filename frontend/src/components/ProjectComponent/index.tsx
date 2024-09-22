@@ -1,6 +1,7 @@
 import React from "react";
 import { IoGlobeOutline } from "react-icons/io5";
 import styled from "styled-components";
+import IconComponent from "../IconComponent";
 
 const ProjectComponent = ({
   image = "",
@@ -14,6 +15,7 @@ const ProjectComponent = ({
       <StyledProjectImage
         className="max-w-[588px] flex-shrink-0 rounded-xl border-2 shadow-lg"
         href={webLink}
+        target="_blank"
       >
         <img src={image} alt="project thumbnail" />
       </StyledProjectImage>
@@ -23,18 +25,12 @@ const ProjectComponent = ({
           <p>{description}</p>
         </StyledProjectInfo>
         <StyledProjectLinks className="flex items-center gap-12 mt-6">
-          <StyledProjectIcon href={srcLink}>
-            <div>
-              <img src="/images/github-icon.svg" alt="github icon" />
-            </div>
-            <a href={srcLink}>Github</a>
-          </StyledProjectIcon>
-          <StyledProjectIcon href={webLink}>
-            <div>
-              <IoGlobeOutline />
-            </div>
-            <a href={webLink}>Website</a>
-          </StyledProjectIcon>
+          <IconComponent webLink={srcLink} name="Github">
+            {<img src="/images/github-icon.svg" alt="github icon" />}
+          </IconComponent>
+          <IconComponent webLink={webLink} name="Website">
+            <IoGlobeOutline />
+          </IconComponent>
         </StyledProjectLinks>
       </StyledProjectContent>
     </StyledProjectWrapper>
@@ -62,27 +58,3 @@ const StyledProjectContent = styled.div``;
 const StyledProjectInfo = styled.div``;
 
 const StyledProjectLinks = styled.div``;
-
-const StyledProjectIcon = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  div {
-    width: 40px;
-    svg,
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
-  a {
-    margin-top: 6px;
-    transition: 0.3s;
-  }
-  &:hover {
-    a {
-      color: var(--blue-cl);
-    }
-  }
-`;

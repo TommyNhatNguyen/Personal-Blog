@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { IMAGES_PATH, PAGE_CONTENT } from "../../../constant/content";
-import { RiReactjsFill } from "react-icons/ri";
 
 const AboutMe = () => {
   const contactKeys = Object.keys(PAGE_CONTENT.contact);
@@ -15,36 +14,44 @@ const AboutMe = () => {
           <h1 className="h1">{PAGE_CONTENT.home.aboutsc.title}</h1>
           <p>{PAGE_CONTENT.home.aboutsc.description}</p>
         </StyledInfo>
-        <StyledLogos className="flex items-center justify-evenly gap-6 mt-10 flex-wrap">
-          {IMAGES_PATH.icons.map((item) => (
-            <img src={item} alt="icon" />
-          ))}
-        </StyledLogos>
-        <StyledContacts className="mt-10">
-          {contactKeys.map((item) => (
-            <div>
-              <span className="text-[var(--gray-cl)] capitalize font-[var(--ff-medium)]">
-                {item}:
-              </span>{" "}
-              {item === "email" && (
-                <a href={`mailto: ${PAGE_CONTENT.contact[item]}`}>
-                  {PAGE_CONTENT.contact[item]}
-                </a>
-              )}
-              {item === "phone" && (
-                <a href={`tel: ${PAGE_CONTENT.contact[item]}`}>
-                  {PAGE_CONTENT.contact[item]}
-                </a>
-              )}
-              {item === "github" && (
-                <a target="_blank" href={`${PAGE_CONTENT.contact[item]}`}>
-                  My Github Link
-                </a>
-              )}
-              {item === "address" && <span>{PAGE_CONTENT.contact[item]}</span>}
-            </div>
-          ))}
-        </StyledContacts>
+        <div className="mt-[18px]">
+          <p className="font-[var(--ff-bold)] text-[2.0rem]">Main stack</p>
+          <StyledLogos className="flex items-center justify-evenly gap-6  flex-wrap mt-6">
+            {IMAGES_PATH.icons.map((item) => (
+              <img src={item} alt="icon" />
+            ))}
+          </StyledLogos>
+        </div>
+        <div className="mt-10">
+          <p className="font-[var(--ff-bold)] text-[2.0rem]">Contact</p>
+          <StyledContacts className="mt-4">
+            {contactKeys.map((item) => (
+              <div>
+                <span className="text-[var(--gray-cl)] capitalize font-[var(--ff-medium)]">
+                  {item}:
+                </span>{" "}
+                {item === "email" && (
+                  <a href={`mailto: ${PAGE_CONTENT.contact[item]}`}>
+                    {PAGE_CONTENT.contact[item]}
+                  </a>
+                )}
+                {item === "phone" && (
+                  <a href={`tel: ${PAGE_CONTENT.contact[item]}`}>
+                    {PAGE_CONTENT.contact[item]}
+                  </a>
+                )}
+                {item === "github" && (
+                  <a target="_blank" href={`${PAGE_CONTENT.contact[item]}`}>
+                    My Github Link
+                  </a>
+                )}
+                {item === "address" && (
+                  <span>{PAGE_CONTENT.contact[item]}</span>
+                )}
+              </div>
+            ))}
+          </StyledContacts>
+        </div>
       </StyledContentWrapper>
     </div>
   );

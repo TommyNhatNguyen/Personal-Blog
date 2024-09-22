@@ -9,8 +9,9 @@ type buttonType = {
 const Button = ({ link, children }: buttonType) => {
   return (
     <Link
-      className="h-[32px] bg-[var(--black-cl)] text-[var(--white-cl)] flex items-center justify-center px-2 rounded-lg hover:text-white hover:bg-[var(--blue-dark-cl)]"
+      className="h-[42px] bg-[var(--black-cl)] text-[var(--white-cl)] flex items-center justify-center px-6 rounded-lg hover:text-white hover:bg-[var(--blue-dark-cl)]"
       to={link}
+      target="_blank"
     >
       {children}
     </Link>

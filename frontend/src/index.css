@@ -24,6 +24,7 @@
     --fs-text: 1.6rem;
     --fs-heading: 4.0rem;
     --fs-title: 3.2rem;
+    --fs-subtitle: 2.4rem;
   }
 
   html {
@@ -78,4 +79,12 @@
       margin-top: 1.6rem;
     }
   }
+
+  .h4 {
+    font-family: var(--ff-medium);
+    font-size: var(--fs-subtitle);
+    text-transform: capitalize;
+
+  }
+
 }

@@ -13,6 +13,63 @@ export const IMAGES_PATH = {
   ],
 };
 
+export const SKILLS: any = {
+  techstacks: {
+    html: "/images/html-icon.svg",
+    css: "/images/css-icon.svg",
+    javascript: "/images/javascript-icon.svg",
+    react: "/images/react-icon.svg",
+    redux: "/images/redux-icon.svg",
+    typescript: "/images/typescript-icon.svg",
+    sass: "/images/sass-icon.svg",
+    tailwind: "/images/tailwind-icon.svg",
+    github: "/images/github-icon.svg",
+    vite: "/images/vite-icon.svg",
+    postgres: "/images/postgres-icon.svg",
+    mui: "/images/mui-icon.svg",
+    axios: "/images/axios-icon.svg",
+  },
+  otherskills: {
+    toeic: "/images/toeic-icon.png",
+    figma: "/images/figma-icon.svg",
+    photoshop: "/images/photoshop-icon.svg",
+    word: "/images/word-icon.svg",
+    excel: "/images/excel-icon.svg",
+    powerpoint: "/images/ppt-icon.svg",
+  },
+};
+
+export const EDUCATION: any = [
+  {
+    place: "CFD Circle",
+    course: "Front-End Master Course",
+    timeline: "02/2024 - Present",
+  },
+  {
+    place: "Informatics Center – University of Science",
+    course: "Data Science and Machine Learning Certificate",
+    timeline: "03/2022 - 04/2023",
+  },
+  {
+    place: "University of Economics HCMC",
+    course: "Bachelor in Business Administration",
+    timeline: "2018 - 2021",
+  },
+];
+
+export const CERTIFICATION: any = [
+  {
+    place: "Informatics Center – HCMUS",
+    name: "Data Science & Machine Learning Certificate",
+    timeline: "04/2023",
+  },
+  {
+    place: "Coder School",
+    name: "Data Analysis Online Course Certificate",
+    timeline: "2021",
+  },
+];
+
 export const PAGE_CONTENT: any = {
   home: {
     aboutsc: {

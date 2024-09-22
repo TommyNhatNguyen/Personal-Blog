@@ -7,10 +7,16 @@ import Button from "../Button";
 const Navbar = () => {
   return (
     <StyledNavbar className="flex items-center gap-8">
-      <NavLink to={PATHS.HOME}>About me</NavLink>
-      <NavLink to={PATHS.BLOG}>Blogs</NavLink>
-      <Link to={PATHS.BLOG}>Contact</Link>
-      <Button>My resumé</Button>
+      {/* <NavLink to={PATHS.HOME}>About me</NavLink> */}
+      {/* <NavLink to={PATHS.BLOG}>Blogs</NavLink>
+      <Link to={PATHS.BLOG}>Contact</Link> */}
+      <Button
+        link={
+          "https://drive.google.com/file/d/1dBhhzRRvk87GS8VBSli36NHNTr-GrlcJ/view?usp=sharing"
+        }
+      >
+        My resumé
+      </Button>
     </StyledNavbar>
   );
 };
