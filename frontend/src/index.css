@@ -7,6 +7,8 @@
     --max-width-page: 1440px;
     --max-width-container: calc(1192px + var(--pd-container) * 2);
     --pd-container: 24px;
+    --pd-section: 100px;
+    --header-height: 100px;
     --ff-regular: 'rr';
     --ff-medium: 'rm';
     --ff-bold: 'rb';
@@ -27,6 +29,7 @@
   html {
     font-size: 62.5%;
     margin: auto;
+    background-color: var(--white-cl);
 
     body {
       max-width: var(--max-width-page);
@@ -45,6 +48,34 @@
     padding-right: var(--pd-container);
     margin: auto;
   }
+
+  .pt-section {
+    padding-top: var(--pd-section);
+  }
+
+  .pb-section {
+    padding-bottom: var(--pd-section);
+  }
 }
 
-@layer utilities {}
+@layer utilities {
+  .h1 {
+    font-family: var(--ff-bold);
+    font-size: var(--fs-heading);
+    text-transform: uppercase;
+
+    &+p {
+      margin-top: 1.6rem;
+    }
+  }
+
+  .h3 {
+    font-family: var(--ff-bold);
+    font-size: var(--fs-title);
+    text-transform: capitalize;
+
+    &+p {
+      margin-top: 1.6rem;
+    }
+  }
+}

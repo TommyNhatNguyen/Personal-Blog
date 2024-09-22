@@ -3,15 +3,15 @@ import React from "react";
 import Header from "../components/Header";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
-import HomePage from "../pages/HomePage";
-import BlogPage from "../pages/BlogPage";
+import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
     <Container>
       <Header />
-      <HomePage />
-      <BlogPage />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </Container>
   );
