@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --max-width-page: 1440px;
+    --max-width-container: calc(1192px + var(--pd-container) * 2);
+    --pd-container: 24px;
+    --ff-regular: 'rr';
+    --ff-medium: 'rm';
+    --ff-bold: 'rb';
+    --white-cl: #f9f9f9;
+    --black-cl: #333333;
+    --gray-cl: #666666;
+    --gray-light-cl: #e0e0e0;
+    --blue-cl: #007Bff;
+    --blue-dark-cl: #003366;
+    --neutral-cl: #f5f5f0;
+    --red-cl: #d8bfd8;
+    --green-cl: #A8D5BA;
+    --fs-text: 1.6rem;
+    --fs-heading: 4.0rem;
+    --fs-title: 3.2rem;
+  }
+
+  html {
+    font-size: 62.5%;
+    margin: auto;
+
+    body {
+      max-width: var(--max-width-page);
+      margin: auto;
+      font-family: var(--ff-regular);
+      font-size: var(--fs-text);
+      color: var(--black-cl);
+    }
+  }
+}
+
+@layer components {
+  .container {
+    max-width: var(--max-width-container);
+    padding-left: var(--pd-container);
+    padding-right: var(--pd-container);
+    margin: auto;
+  }
+}
+
+@layer utilities {}
