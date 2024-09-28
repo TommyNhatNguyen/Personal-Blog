@@ -13,9 +13,7 @@ const IconComponent = ({ webLink, name, children }: any) => {
   return (
     <StyledProjectIcon target="_blank" href={webLink}>
       <div>{children}</div>
-      <a target="_blank" className="capitalize" href={webLink}>
-        {name}
-      </a>
+      <p className="capitalize">{name}</p>
     </StyledProjectIcon>
   );
 };

@@ -11,7 +11,7 @@ const ProjectComponent = ({
   webLink,
 }: any) => {
   return (
-    <StyledProjectWrapper className="flex items-center justify-between gap-6">
+    <StyledProjectWrapper className="flex lg:flex-row flex-col items-center justify-between gap-6">
       <StyledProjectImage
         className="max-w-[588px] flex-shrink-0 rounded-xl border-2 shadow-lg"
         href={webLink}

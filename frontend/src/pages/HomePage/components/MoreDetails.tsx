@@ -41,12 +41,12 @@ const MoreDetails = () => {
             </li>
           </StyledList>
         </StyledCenterWrapper>
-        <StyledTopWrapper className="flex items-start gap-12 mt-[50px] flex-wrap">
+        <StyledTopWrapper className="flex lg:flex-row flex-col items-start gap-12 mt-[50px] flex-wrap ">
           <StyledTopGroup className="flex-1">
             <h3 className="h3">Technologies</h3>
             <div className="flex items-end gap-12 mt-10 flex-wrap">
               {skillsContent.map((item) => (
-                <IconComponent name={item}>
+                <IconComponent key={item} name={item}>
                   <img src={SKILLS.techstacks[item]} alt="icon" />
                 </IconComponent>
               ))}
@@ -57,6 +57,7 @@ const MoreDetails = () => {
             <div className="flex items-end gap-12 mt-10 flex-wrap">
               {otherContent.map((item) => (
                 <IconComponent
+                  key={item}
                   name={item === "toeic" ? "toeic (880/990)" : item}
                 >
                   <img src={SKILLS.otherskills[item]} alt="icon" />
@@ -66,14 +67,14 @@ const MoreDetails = () => {
           </StyledTopGroup>
         </StyledTopWrapper>
 
-        <div className="flex items-start gap-12">
+        <div className="flex items-start gap-12 lg:flex-row flex-col">
           <StyledCenterWrapper className=" mt-[50px] flex-1">
             <h3 className="h3">Education</h3>
             <ul className="mt-4">
               {EDUCATION.map((item: any) => {
                 const { place, course, timeline } = item;
                 return (
-                  <li className="mt-4">
+                  <li key={place} className="mt-4">
                     <h4 className="h4">{place}</h4>
                     <p className="mt-0">{course}</p>
                     <p className="text-[var(--gray-cl)]">{timeline}</p>
@@ -88,7 +89,7 @@ const MoreDetails = () => {
               {CERTIFICATION.map((item: any) => {
                 const { place, name, timeline } = item;
                 return (
-                  <li className="mt-4">
+                  <li key={place} className="mt-4">
                     <h4 className="h4">{name}</h4>
                     <p className="mt-0">{place}</p>
                     <p className="text-[var(--gray-cl)]">{timeline}</p>

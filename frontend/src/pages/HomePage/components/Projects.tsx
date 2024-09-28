@@ -10,7 +10,7 @@ const Projects = () => {
       <h2 className="h1 text-center">Projects</h2>
       <StyledProjectsWrapper className="pt-[50px]">
         {projectsContent.map((item: any) => (
-          <ProjectComponent {...item} />
+          <ProjectComponent key={item.title} {...item} />
         ))}
       </StyledProjectsWrapper>
     </div>
@@ -28,6 +28,9 @@ const StyledProjectsWrapper = styled.div`
   > div {
     &:nth-child(even) {
       flex-direction: row-reverse;
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
     }
   }
 `;

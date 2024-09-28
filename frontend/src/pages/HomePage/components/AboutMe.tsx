@@ -5,8 +5,8 @@ import { IMAGES_PATH, PAGE_CONTENT } from "../../../constant/content";
 const AboutMe = () => {
   const contactKeys = Object.keys(PAGE_CONTENT.contact);
   return (
-    <div className="pt-[70px] pb-section flex gap-6 items-center justify-between">
-      <StyledHeroImage className="flex-shrink-0">
+    <div className="pt-[70px] pb-section flex flex-col lg:flex-row gap-6 items-center justify-between">
+      <StyledHeroImage className="flex-shrink-0 rounded-lg overflow-hidden shadow-md">
         <img src={IMAGES_PATH.about} alt="about me img" />
       </StyledHeroImage>
       <StyledContentWrapper className="flex-grow">
@@ -18,7 +18,7 @@ const AboutMe = () => {
           <p className="font-[var(--ff-bold)] text-[2.0rem]">Main stack</p>
           <StyledLogos className="flex items-center justify-evenly gap-6  flex-wrap mt-6">
             {IMAGES_PATH.icons.map((item) => (
-              <img src={item} alt="icon" />
+              <img key={item} src={item} alt="icon" />
             ))}
           </StyledLogos>
         </div>
@@ -26,7 +26,7 @@ const AboutMe = () => {
           <p className="font-[var(--ff-bold)] text-[2.0rem]">Contact</p>
           <StyledContacts className="mt-4">
             {contactKeys.map((item) => (
-              <div>
+              <div key={item}>
                 <span className="text-[var(--gray-cl)] capitalize font-[var(--ff-medium)]">
                   {item}:
                 </span>{" "}
