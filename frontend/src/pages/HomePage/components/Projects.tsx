@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectComponent from "../../../components/ProjectComponent";
 import { PAGE_CONTENT } from "../../../constant/content";
 import styled from "styled-components";

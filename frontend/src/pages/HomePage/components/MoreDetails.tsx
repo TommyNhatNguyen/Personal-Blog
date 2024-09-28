@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import IconComponent from "../../../components/IconComponent";
 import { CERTIFICATION, EDUCATION, SKILLS } from "../../../constant/content";

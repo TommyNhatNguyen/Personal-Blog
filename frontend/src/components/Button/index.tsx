@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { Link, LinkProps } from "react-router-dom";
+import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 type buttonType = {
   children: ReactNode;

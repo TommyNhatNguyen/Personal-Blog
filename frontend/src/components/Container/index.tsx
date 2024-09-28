@@ -1,4 +1,3 @@
-import React from "react";
 import { childrenType } from "../../utilities/types";
 
 const Container = ({ children }: childrenType) => {

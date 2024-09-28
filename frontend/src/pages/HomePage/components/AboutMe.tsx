@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { IMAGES_PATH, PAGE_CONTENT } from "../../../constant/content";
 
