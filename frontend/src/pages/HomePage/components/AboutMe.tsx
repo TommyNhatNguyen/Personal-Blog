@@ -40,8 +40,12 @@ const AboutMe = () => {
                   </a>
                 )}
                 {item === "github" && (
-                  <a target="_blank" href={`${PAGE_CONTENT.contact[item]}`}>
-                    My Github Link
+                  <a
+                    className="text-blue-400 underline"
+                    target="_blank"
+                    href={`${PAGE_CONTENT.contact[item]}`}
+                  >
+                    My Github
                   </a>
                 )}
                 {item === "address" && (

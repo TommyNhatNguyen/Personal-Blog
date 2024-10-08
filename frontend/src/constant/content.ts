@@ -74,8 +74,12 @@ export const PAGE_CONTENT: any = {
   home: {
     aboutsc: {
       title: "About me",
-      description:
-        "Aspiring front-end developer with a finance background and skills in ReactJs, HTML, CSS, and JavaScript. I offer strong analytical and problem-solving abilities to create user-friendly, visually appealing web solutions. Excited to contribute fresh perspectives in a dynamic tech environment.",
+      description: `Aspiring front-end developer with main skills in ReactJs,
+Typescript, HTML, CSS, and JavaScript. I offer strong
+analytical and problem-solving abilities to create user-
+friendly, visually appealing web solutions. Excited to
+contribute fresh perspectives in a dynamic tech
+environment`,
     },
   },
   contact: {
@@ -85,6 +89,13 @@ export const PAGE_CONTENT: any = {
     github: "https://github.com/TommyNhatNguyen",
   },
   projects: [
+    {
+      title: "One human mean",
+      description: `One Human Mean is my personal blog, built with a sleek, free Figma design and a custom CMS for efficient post and project management. It boasts a PageSpeed Insights score over 90, ensuring optimal performance. Hosted on a VPS with Nginx, the front-end features React.js, TypeScript, Redux, Tailwind, and Axios, while the back-end utilizes Express.js, PostgreSQL, and JWT for secure authentication. Version control is managed via GitHub for seamless collaboration.`,
+      image: "/images/onehumanmean.jpg",
+      srcLink: "https://github.com/TommyNhatNguyen/onehumanmean-blog",
+      webLink: "https://onehumanmean.com/",
+    },
     {
       title: "Streamvibe",
       description:

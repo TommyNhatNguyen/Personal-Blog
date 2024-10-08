@@ -6,7 +6,7 @@ const Navbar = () => {
     <StyledNavbar className="flex items-center gap-8">
       <Button
         link={
-          "https://drive.google.com/file/d/1dBhhzRRvk87GS8VBSli36NHNTr-GrlcJ/view?usp=sharing"
+          "https://drive.google.com/file/d/1TxzwYVswEliaoDyXVIASMIhHUou8Vyr-/view?usp=sharing"
         }
       >
         My resumé
